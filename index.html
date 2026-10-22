@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Death Note — Le carnet de Ryuk</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="contenu.js" defer></script>
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <a href="#top" class="wordmark">DEATH NOTE <span>fan site</span></a>
+        <a href="#writing">Écrire une entrée</a>
+    </header>
+    <main id="top">
+        <div class="introduction">
+            <p class="eyebrow">Les pages gardent une trace</p>
+            <h1 id="site-title">Le carnet de Ryuk</h1>
+            <p>Ouvre le carnet, ajoute un personnage et retrouve son nom sur la page.</p>
+        </div>
+        <section id="book" class="book" aria-label="Le carnet interactif">
+            <button id="toggle-book" class="book-cover" type="button" aria-expanded="true" aria-controls="paper">
+                <img src="assets/death-note-cover.png" alt="Carnet noir Death Note et plume blanche" width="1254" height="1254">
+                <span id="toggle-label">Fermer le carnet</span>
+            </button>
+            <div id="paper" class="paper">
+                <div class="paper-heading"><span>DEATH NOTE</span><span id="entry-count">0 entrée</span></div>
+                <h2>Les noms du carnet</h2>
+                <div id="search-area" class="search-area" hidden>
+                    <label for="search">Rechercher un personnage</label>
+                    <input id="search" type="search" autocomplete="off" placeholder="Un nom à retrouver">
+                </div>
+                <ol id="entries" class="entries"></ol>
+                <p id="empty-state" hidden>Aucun nom ne correspond à la recherche.</p>
+                <p class="page-number">I</p>
+            </div>
+        </section>
+        <section id="writing" class="writing" aria-labelledby="writing-title">
+            <div>
+                <p class="eyebrow">Une nouvelle ligne</p>
+                <h2 id="writing-title">Écrire dans le carnet</h2>
+                <p>Les nouvelles entrées restent dans cet onglet jusqu’à l’export.</p>
+            </div>
+            <form id="entry-form">
+                <div class="fields">
+                    <div><label for="name">Personnage</label><input id="name" name="name" required maxlength="48" autocomplete="off" placeholder="Ex. : Ryuk"></div>
+                    <div><label for="note">Note <span>(facultative)</span></label><input id="note" name="note" maxlength="100" autocomplete="off" placeholder="Une courte annotation"></div>
+                </div>
+                <div class="actions"><button type="submit" class="primary">Écrire dans le carnet</button><button id="export-content" type="button" class="secondary">Exporter le contenu</button></div>
+                <p id="feedback" role="status" aria-live="polite">Le carnet est prêt.</p>
+                <p class="export-help">Pour conserver les ajouts dans le projet : exporte <code>contenu.js</code>, puis remplace le fichier du même nom avant de créer ton commit.</p>
+            </form>
+        </section>
+    </main>
+    <footer>Fan site pédagogique · Git, branches et pull requests · A1 - S3</footer>
+</body>
+</html>

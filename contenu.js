@@ -1,0 +1,13 @@
+window.CARNET = {
+    "title": "Le carnet de Ryuk",
+    "entries": [
+        {
+            "name": "Light Yagami",
+            "note": "Première page du carnet."
+        },
+        {
+            "name": "L",
+            "note": "Une énigme à résoudre."
+        }
+    ]
+};

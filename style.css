@@ -1,0 +1,70 @@
+:root {
+    --background: #101012;
+    --ink: #1c1916;
+    --accent: #a83242;
+    --paper: #f4eddd;
+    color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--background); color: #ebe7e0; font: 16px/1.6 system-ui, sans-serif; }
+a { color: inherit; text-underline-offset: 5px; }
+button, input { font: inherit; }
+button, a, input { -webkit-tap-highlight-color: transparent; }
+:focus-visible { outline: 3px solid #d8b578; outline-offset: 5px; }
+.site-header { max-width: 1180px; margin: auto; padding: 24px 32px; display: flex; justify-content: space-between; align-items: center; gap: 24px; border-bottom: 1px solid #333137; }
+.site-header > a:last-child { font-size: 0.85rem; }
+.wordmark { font-family: Georgia, serif; letter-spacing: 0.16em; text-decoration: none; font-size: 1.3rem; }
+.wordmark span { display: block; font: 0.65rem/1.5 system-ui, sans-serif; letter-spacing: 0.2em; color: #b7b0a5; }
+main { max-width: 1180px; margin: 0 auto; padding: 34px 32px 52px; }
+.introduction { margin-bottom: 24px; }
+.eyebrow { margin: 0 0 8px; color: #c7ae86; text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.7rem; }
+h1 { margin: 0 0 12px; font: 2.8rem/1.15 Georgia, serif; }
+h2 { margin: 0 0 16px; font: 1.8rem/1.2 Georgia, serif; }
+.introduction > p:last-child { color: #c0b9ad; margin: 0; }
+.book { display: grid; grid-template-columns: minmax(260px, 0.95fr) minmax(320px, 1.05fr); align-items: stretch; gap: 0; }
+.book-cover { border: 0; background: transparent; color: #e1d2b8; cursor: pointer; padding: 0 18px 0 0; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.book-cover img { display: block; width: 100%; height: auto; max-height: 520px; object-fit: contain; }
+.book-cover span { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; padding-bottom: 12px; }
+.paper { min-height: 520px; color: var(--ink); padding: 30px 36px 24px 48px; border-radius: 2px 9px 9px 2px; border-left: 1px solid #a59a83; box-shadow: inset 18px 0 25px -22px #3d3020, 8px 9px 0 -4px #cabda4, 12px 17px 30px #0009; background: var(--paper); color-scheme: light; }
+.paper-heading { display: flex; justify-content: space-between; align-items: center; gap: 20px; font: 0.65rem/1.4 system-ui, sans-serif; letter-spacing: 0.15em; color: #756954; padding-bottom: 18px; border-bottom: 1px solid #c9bca4; }
+.paper h2 { margin-top: 22px; font-family: Georgia, serif; }
+.entries { margin: 0; padding-left: 24px; }
+.entries li { padding: 12px 0 12px 8px; border-bottom: 1px solid #d4c8af; }
+.entries strong { display: block; font-family: "Segoe Print", "Comic Sans MS", cursive; font-size: 1.25rem; font-weight: 400; }
+.entries li span { display: block; color: #6b5c48; font: 0.75rem/1.5 system-ui, sans-serif; }
+.page-number { text-align: center; font: 0.8rem Georgia, serif; color: #7d7059; margin: 22px 0 0; }
+.book.closed { grid-template-columns: minmax(260px, 540px); justify-content: center; }
+.book.closed .book-cover { padding-right: 0; }
+.writing { margin-top: 46px; padding-top: 30px; border-top: 1px solid #383338; display: grid; grid-template-columns: 0.85fr 1.35fr; gap: 40px; }
+.writing > div > p:last-child { font-size: 0.9rem; color: #b9b1a7; max-width: 29ch; }
+.fields { display: grid; grid-template-columns: 1fr 1.25fr; gap: 16px; }
+label { display: block; font-size: 0.8rem; margin-bottom: 6px; }
+label span { color: #a69e96; }
+input { width: 100%; padding: 11px 13px; border-radius: 3px; border: 1px solid #666068; background: #19181c; color: #f5efe5; }
+.search-area { margin-bottom: 12px; }
+.search-area input { background: #fffaf1; color: var(--ink); border-color: #9b8e78; }
+.actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+.primary, .secondary { padding: 11px 16px; cursor: pointer; border-radius: 3px; }
+.primary { background: var(--accent); color: white; border: 1px solid var(--accent); }
+.secondary { background: transparent; color: #ddd2c3; border: 1px solid #6e6363; }
+#feedback { min-height: 2.8em; font-size: 0.85rem; color: #e2c99e; margin: 14px 0 4px; }
+.export-help { font-size: 0.75rem; color: #b9b0a6; }
+.export-help code { color: #ede0c7; }
+footer { text-align: center; padding: 24px; border-top: 1px solid #333137; color: #a79b8f; font-size: 0.7rem; }
+[hidden] { display: none !important; }
+@media (max-width: 720px) {
+    .site-header { padding: 18px 20px; }
+    main { padding: 26px 20px 36px; }
+    h1 { font-size: 2.2rem; }
+    .book { grid-template-columns: 1fr; }
+    .book-cover { padding: 0; }
+    .book-cover img { max-height: 340px; }
+    .paper { min-height: 380px; padding: 26px; }
+    .writing { grid-template-columns: 1fr; gap: 16px; }
+    .writing > div > p:last-child { max-width: none; }
+    .fields { grid-template-columns: 1fr; }
+    .paper-heading { letter-spacing: 0.05em; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
