@@ -8,6 +8,10 @@ window.CARNET = {
         {
             "name": "L",
             "note": "Une énigme à résoudre."
+        },
+        {
+            "name": "Ryuk",
+            "note": "Simply the best"
         }
     ]
 };
