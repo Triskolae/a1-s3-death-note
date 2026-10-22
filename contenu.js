@@ -12,6 +12,10 @@ window.CARNET = {
         {
             "name": "Ryuk",
             "note": "Simply the best"
+        },
+        {
+            "name": "Misa Amane",
+            "note": "La blonde gothique qui a un kami"
         }
     ]
 };
